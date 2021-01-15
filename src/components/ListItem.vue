@@ -10,6 +10,7 @@ export default {
     methods: {
         handleClick() {
             eventBus.$emit('selected-movie', this.movie)
+            
         }
     }
 }
