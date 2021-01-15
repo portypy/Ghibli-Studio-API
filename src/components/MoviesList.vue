@@ -14,10 +14,11 @@ export default {
     components:{
         'list-item': ListItem
     }
-
 }
 </script>
 
-<style>
-
+<style lang="css">
+ul {
+    list-style-type: none;
+  }
 </style>
