@@ -6,6 +6,9 @@
       <ul>
           <vehicles v-for="vehicle in vehicles" :vehicle="vehicle"></vehicles>
       </ul>
+      <ul>
+          <humans v-for="human in humans" :human="human"></humans>
+      </ul>
   </div>
 </template>
 
@@ -13,12 +16,14 @@
 import { eventBus } from '../main'
 import Locations from './Locations.vue'
 import Vehicles from './Vehicles'
+import Humans from './Humans'
 export default {
     name: 'extra-details',
-    props: ['locations', 'vehicles'],
+    props: ['locations', 'vehicles','humans'],
     components: {
         'locations': Locations,
-        'vehicles': Vehicles
+        'vehicles': Vehicles,
+        'humans': Humans
     }
 }
 </script>

@@ -2,7 +2,7 @@
 
   <li>
       <p>»Name: {{vehicle.name}}</p>
-      <p>Class: {{vehicle.vehicle_class}}</p>
+      <p>Class: {{vehicle.vehicle_class}}«</p>
   </li>
         
 
