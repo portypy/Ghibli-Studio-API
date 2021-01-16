@@ -1,13 +1,13 @@
 <template>
 <div id="main-container">
-    <div id="list">
+    <div id="list" class="grid-element">
           <div >
               <img src="./assets/logo.svg" alt="studio ghibli" height="70">
               <h3>Movies List:</h3>
               <movies-list :movies="movies"></movies-list>
           </div>  
     </div>
-    <div id="tenor">
+    <div id="tenor" class="grid-element">
         <div v-if="veh_nr != 0">
             <extra-details :vehicles="vehicles "></extra-details> 
         </div>
@@ -21,7 +21,12 @@
             <img src="./assets/tenor.gif" alt="tenor gif"  height="500">
         </div>
     </div>
-    <movie-details id="movieDetails" :selectedMovie="selectedMovie"></movie-details>
+    <movie-details id="movieDetails" class="grid-element" :selectedMovie="selectedMovie"></movie-details>
+    <div id="tenor2" class="grid-element" >
+      <button class="button">Where is Studio Ghibli?</button>
+      <br>
+      <img src="./assets/tenor_down.gif" alt="tenor">
+    </div>
 </div>
 </template>
 
@@ -54,6 +59,7 @@ mounted() {
       this.selectedMovie = movie;
       this.loc_nr = 0
       this.veh_nr = 0
+      this.hum_nr = 0
     }),
     eventBus.$on('locations',() => {
       this.loc_nr = 1
@@ -101,33 +107,49 @@ components: {
 #main-container {
   font-family:fantasy;
   display: grid;
-  grid-template-columns: 40% 20% auto;
-  grid-template-rows: 90 auto;
+  grid-template-columns: 30% 30% auto;
+  grid-template-rows: 50 auto;
   background-color: rgb(24, 171, 233);
 }
-#tenor{
-  grid-column: 1 ;
-  grid-row: 1;
-  padding: 2%;
+.grid-element{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+#tenor{
+  grid-column: 1 ;
+  grid-row: 1 / span 2;
+  padding: 2%;
+}
+#tenor2{
+  grid-column: 2;
+  grid-row: 2;
+  padding: 4%;
 }
 #list{
   cursor: pointer;
   grid-column: 2;
   grid-row: 1;
+  padding: 4%;
 }
 #movieDetails{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   grid-column: 3 ;
   grid-row: 1;
   padding-top: 3%;
   padding-right: 3%;
 }
-
+.button {
+    background-color: rgb(24, 171, 233);
+    border-radius:8px;
+    cursor:pointer; 
+    padding: 8%;
+}
+.button:hover {
+	background-color:#499dfc;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
 </style>
