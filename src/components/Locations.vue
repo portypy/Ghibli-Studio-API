@@ -1,5 +1,5 @@
 <template lang="html">
-  <li>{{location.name}}hi</li>
+  <li>{{location.name}}</li>
 </template>
 
 <script>

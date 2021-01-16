@@ -5,14 +5,17 @@
         <p>Director: {{selectedMovie.director}}</p>
         <p>Year: {{selectedMovie.release_date}}</p>
         <p>{{selectedMovie.description}}</p>
-        <p v-on:click="handleClickLocations" class="list-item" >Check locations </p>
         
-        <p class="list-item">Check people</p>
-        <p v-on:click="handleClickVehicles" class="list-item"> Check vehicles</p>
     </div>
     
     <div v-else >
         <img src="../assets/download.png" alt="studio ghilbi logo">
+    </div>
+    <div>
+        <p v-on:click="handleClickLocations" class="list-item" >Check locations </p>
+        
+        <p class="list-item">Check people</p>
+        <p v-on:click="handleClickVehicles" class="list-item"> Check vehicles</p>
     </div>
 </div>
 </template>
