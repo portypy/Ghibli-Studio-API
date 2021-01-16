@@ -1,4 +1,4 @@
-<template>
+<template lang="html" >
 <div id="main-container">
     <div id="list" class="grid-element">
           <div >
@@ -23,10 +23,17 @@
     </div>
     <movie-details id="movieDetails" class="grid-element" :selectedMovie="selectedMovie"></movie-details>
     <div id="tenor2" class="grid-element" >
-      <button class="button">Where is Studio Ghibli?</button>
-      <br>
-      <img src="./assets/tenor_down.gif" alt="tenor">
+      
+     
+      
+      
+          <maps id="maps"> </maps>
+        </div>
+        
+      
+      
     </div>
+    
 </div>
 </template>
 
@@ -35,6 +42,7 @@ import { eventBus } from './main'
 import MoviesList from './components/MoviesList'
 import MovieDetails from './components/MovieDetails'
 import ExtraDetails from './components/ExtraDetails'
+import Maps from './components/Maps'
 export default {
   name: "app",
   data() {
@@ -46,7 +54,8 @@ export default {
       humans: [],
       loc_nr: 0,
       veh_nr: 0,
-      hum_nr: 0
+      hum_nr: 0,
+      
     }
   },
 
@@ -98,14 +107,16 @@ mounted() {
 components: {
   "movies-list": MoviesList,
   "movie-details": MovieDetails,
-  "extra-details": ExtraDetails
+  "extra-details": ExtraDetails,
+  "maps": Maps
 }
 }
+
 </script>
 
 <style lang="css" >
 #main-container {
-  font-family:fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: grid;
   grid-template-columns: 30% 30% auto;
   grid-template-rows: 50 auto;
@@ -139,17 +150,12 @@ components: {
   padding-top: 3%;
   padding-right: 3%;
 }
-.button {
-    background-color: rgb(24, 171, 233);
-    border-radius:8px;
-    cursor:pointer; 
-    padding: 8%;
-}
-.button:hover {
-	background-color:#499dfc;
-}
-.button:active {
-	position:relative;
-	top:1px;
+#maps{
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
 }
 </style>
