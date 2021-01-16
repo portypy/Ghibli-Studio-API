@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
       <ul>
-          <list-item v-for="movie in movies" :movie="movie"></list-item>
+          <list-item class="list-item" v-for="movie in movies" :movie="movie"></list-item>
       </ul>
   </div>
 </template>
@@ -11,9 +11,7 @@ import ListItem from './ListItem.vue'
 export default {
     name: "movies-list",
     props: ["movies"],
-    components:{
-        'list-item': ListItem
-    }
+    components:{'list-item': ListItem}
 }
 </script>
 
@@ -22,4 +20,7 @@ ul {
     list-style-type: none;
     padding: 0%;
   }
+.list-item:hover {
+    color: whitesmoke;
+}
 </style>
