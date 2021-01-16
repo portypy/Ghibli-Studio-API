@@ -2,7 +2,6 @@
   <div>
       <ul>
           <locations v-for="location in locations" :location="location"></locations>
-          <locations></locations>
       </ul>
   </div>
 </template>
@@ -13,12 +12,7 @@ import Locations from './Locations.vue'
 export default {
     name: 'extra-details',
     props: ['locations'],
-    components: {'locations': Locations},
-    // mounted(){
-    //     eventBus.$on('locations', (locations) =>{
-    //         this.locations = locations;
-    //     })
-    // }
+    components: {'locations': Locations}
 }
 </script>
 

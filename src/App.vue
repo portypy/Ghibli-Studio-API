@@ -1,8 +1,8 @@
 <template>
   <div id="listAndLogo">
       <div v-if="locations.length != 0 "> 
-          <extra-details :locations="locations"></extra-details>
-          <extra-details></extra-details>
+          <extra-details :locations="locations "></extra-details>
+          
        </div>
       <div v-else >
           <img src="./assets/tenor.gif" alt="tenor gif" id="tenor" height="500">
@@ -28,8 +28,8 @@ export default {
     return {
       movies: [],
       selectedMovie: null,
-      number: 0,
-      locations: []
+      locations: [],
+      vehicles: []
     }
   },
 
@@ -42,17 +42,28 @@ mounted() {
 
     eventBus.$on('selected-movie', (movie) => {
       this.selectedMovie = movie;
-
-    eventBus.$on('locations',(number) => {
-      this.number = number;
+      this.locations = []
+    }),
+    eventBus.$on('locations',() => {
       if (this.locations.length == 0) {              
                 fetch(this.selectedMovie.locations)
                 .then(res => res.json())
-                .then(locations => this.locations = locations); 
+                .then(locations => this.locations = locations)
             }
+      this.selectedMovie = null;
+    }),
+    eventBus.$on('vehicles',() => {
+      if (this.locations.length == 0) {              
+                fetch(this.selectedMovie.vehicles)
+                .then(res => res.json())
+                .then(locations => this.locations = locations)
+            }
+      this.selectedMovie = null;
     })
+
+
     
-    });
+    
     
 },
 components: {
@@ -75,6 +86,7 @@ components: {
   grid-column: 1 ;
   padding: 2%;
 }
+
 #list{
   cursor: pointer;
   grid-column: 2 / 3;
@@ -85,7 +97,4 @@ components: {
   padding-right: 3%;
 }
 
-
-
-  
 </style>
