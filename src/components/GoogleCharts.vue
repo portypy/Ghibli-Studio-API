@@ -15,7 +15,7 @@
             minorTicks: 5
             }"
     />
-    <img src="../assets/well.gif" alt="well done gif" height="100">
+    <img src="../assets/well.gif" alt="well done gif" height="120">
 </div>
 </template>
 
@@ -42,7 +42,7 @@ export default {
 
 <style lang="css">
 #rt-logo {
-    box-shadow:  0 0 100px black;
-     opacity: 0.3
+box-shadow:  0 0 100px black;
+opacity: 0.7
 }
 </style>

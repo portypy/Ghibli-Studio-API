@@ -1,5 +1,6 @@
 <template lang="html">
   <div>
+      <img src="../assets/fly.gif" height="150" id="fly">
       <ul>
           <locations v-for="location in locations" :location="location"></locations>
           <vehicles v-for="vehicle in vehicles" :vehicle="vehicle"></vehicles>
@@ -29,4 +30,8 @@ ul {
     list-style-type: none;
     padding: 0%;
   }
+  #fly{
+  top: 10px;
+  border: 3px solid green;
+}
 </style>

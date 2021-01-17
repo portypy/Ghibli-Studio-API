@@ -1,11 +1,9 @@
-<template lang="html" >
+<template  lang="html">
 <div id="main-container">
   <div id="list" class="grid-element">
-          <div >
-              <img src="./assets/logo.svg" alt="studio ghibli" height="70">
-              <h3>Movies List:</h3>
-              <movies-list :movies="movies"></movies-list>
-          </div>  
+          <img src="./assets/logo.svg" alt="studio ghibli" height="70">
+          <h3>Movies List:</h3>
+          <movies-list :movies="movies"></movies-list> 
   </div>
   <div id="tenor" class="grid-element">
         <div v-if="veh_nr != 0">
@@ -18,14 +16,14 @@
           <extra-details :humans="humans "></extra-details>
         </div>
         <div v-else >
-            <img src="./assets/tenor.gif" alt="tenor gif"  height="500">
+            <img src="./assets/tenor.gif" alt="tenor gif"  height="500" id="tenor-gif">
         </div>
   </div>
     <movie-details id="movieDetails" class="grid-element" :selectedMovie="selectedMovie"></movie-details>
     <div id="tenor2" class="grid-element" >
           <maps id="maps"> </maps>
     </div>
-    <charts v-if="selectedMovie" :selectedMovie="selectedMovie" id="charts" ></charts> 
+    <charts v-if="selectedMovie" :selectedMovie="selectedMovie" id="charts" ></charts>
   </div>  
   
 </template>
@@ -125,7 +123,10 @@ components: {
 #tenor{
   grid-column: 1 ;
   grid-row: 1 / span 2;
-  padding: 2%;
+  padding-top: 2em;
+  margin-left: 10em;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 #tenor2{
   grid-column: 3;
@@ -149,7 +150,6 @@ components: {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: space-around;
 }
 #charts{
@@ -158,6 +158,18 @@ components: {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-around; */
+}
+#tenor-gif{
+  margin-top: 4em;
+    border: 3px solid green;
+}
+#susu{
+  box-shadow:  0 0 100px brown;
+}
+#susu-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>

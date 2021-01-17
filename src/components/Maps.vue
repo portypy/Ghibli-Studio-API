@@ -22,7 +22,7 @@ export default {
    setupLeafletMap: function () {
      
     const mapDiv = L.map("mapContainer").setView(this.center, 13);
-    var popup = L.popup()
+    const popup = L.popup()
       .setLatLng([35.696190656717114, 139.57042410468455])
       .setContent("Studio Ghibli Museum - Tokyo")
       .openOn(mapDiv);
@@ -34,7 +34,7 @@ export default {
          maxZoom: 18,
          
          id: "mapbox/satellite-v9",
-         accessToken: 'pk.eyJ1IjoicnVtYnVyYWswMDciLCJhIjoiY2trMDY3ZHdxMGVlMzJvcGMyZW8wMjU3dCJ9.iFV6KAaTxjBXXSh_WWRXCA'
+         accessToken: '{accessToken}'
        }
      ).addTo(mapDiv);
    },
