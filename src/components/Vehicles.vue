@@ -1,13 +1,10 @@
-<template>
+<template lang="html">
 
   <li>
       <p>»Name: {{vehicle.name}}</p>
       <p>Class: {{vehicle.vehicle_class}}«</p>
   </li>
-        
 
- 
-  
 </template>
 
 <script>

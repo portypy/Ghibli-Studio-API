@@ -1,13 +1,13 @@
 <template lang="html" >
 <div id="main-container">
-    <div id="list" class="grid-element">
+  <div id="list" class="grid-element">
           <div >
               <img src="./assets/logo.svg" alt="studio ghibli" height="70">
               <h3>Movies List:</h3>
               <movies-list :movies="movies"></movies-list>
           </div>  
-    </div>
-    <div id="tenor" class="grid-element">
+  </div>
+  <div id="tenor" class="grid-element">
         <div v-if="veh_nr != 0">
             <extra-details :vehicles="vehicles "></extra-details> 
         </div>
@@ -20,20 +20,12 @@
         <div v-else >
             <img src="./assets/tenor.gif" alt="tenor gif"  height="500">
         </div>
-    </div>
+  </div>
     <movie-details id="movieDetails" class="grid-element" :selectedMovie="selectedMovie"></movie-details>
     <div id="tenor2" class="grid-element" >
-      
-     
-      
-      
           <maps id="maps"> </maps>
-        </div>
-        
-      
-      
     </div>
-    
+  </div>   
 </div>
 </template>
 
@@ -114,7 +106,7 @@ components: {
 
 </script>
 
-<style lang="css" >
+<style lang="css" scoped>
 #main-container {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: grid;

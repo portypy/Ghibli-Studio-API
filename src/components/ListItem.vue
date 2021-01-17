@@ -9,8 +9,7 @@ export default {
     props: ['movie'],
     methods: {
         handleClick() {
-            eventBus.$emit('selected-movie', this.movie)
-            
+            eventBus.$emit('selected-movie', this.movie)          
         }
     }
 }
