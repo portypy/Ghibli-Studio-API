@@ -1,4 +1,4 @@
-<template lang="html">
+<template >
 
   <li>
       <p>»Name: {{vehicle.name}}</p>

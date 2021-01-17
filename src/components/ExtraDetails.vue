@@ -2,11 +2,7 @@
   <div>
       <ul>
           <locations v-for="location in locations" :location="location"></locations>
-      </ul>
-      <ul>
           <vehicles v-for="vehicle in vehicles" :vehicle="vehicle"></vehicles>
-      </ul>
-      <ul>
           <humans v-for="human in humans" :human="human"></humans>
       </ul>
   </div>

@@ -25,8 +25,9 @@
     <div id="tenor2" class="grid-element" >
           <maps id="maps"> </maps>
     </div>
-  </div>   
-</div>
+    <charts v-if="selectedMovie" :selectedMovie="selectedMovie" id="charts" ></charts> 
+  </div>  
+  
 </template>
 
 <script>
@@ -35,6 +36,7 @@ import MoviesList from './components/MoviesList'
 import MovieDetails from './components/MovieDetails'
 import ExtraDetails from './components/ExtraDetails'
 import Maps from './components/Maps'
+import GoogleCharts from './components/GoogleCharts'
 export default {
   name: "app",
   data() {
@@ -47,7 +49,6 @@ export default {
       loc_nr: 0,
       veh_nr: 0,
       hum_nr: 0,
-      
     }
   },
 
@@ -100,7 +101,8 @@ components: {
   "movies-list": MoviesList,
   "movie-details": MovieDetails,
   "extra-details": ExtraDetails,
-  "maps": Maps
+  "maps": Maps,
+  "charts": GoogleCharts
 }
 }
 
@@ -126,7 +128,7 @@ components: {
   padding: 2%;
 }
 #tenor2{
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 2;
   padding: 4%;
 }
@@ -149,5 +151,13 @@ components: {
   flex-direction: column;
   /* align-items: center; */
   justify-content: space-around;
+}
+#charts{
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
 }
 </style>
