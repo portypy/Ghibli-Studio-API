@@ -46,7 +46,7 @@ export default {
          maxZoom: 18,
          
          id: "mapbox/satellite-v9",
-         accessToken: 'pk.eyJ1IjoicnVtYnVyYWswMDciLCJhIjoiY2trMDY3ZHdxMGVlMzJvcGMyZW8wMjU3dCJ9.iFV6KAaTxjBXXSh_WWRXCA'
+         accessToken: ''
        }
      ).addTo(mapDiv);
    },
