@@ -1,9 +1,12 @@
 {
   "name": "ghibli_api",
   "version": "0.1.0",
+  "engines": {
+    "node": "15.x"
+  },
   "private": true,
   "scripts": {
-    "start": "node src/main.js",
+    "start": "node index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
