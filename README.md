@@ -3,6 +3,8 @@
 A simple Vue.js app created from scrach as a weekend homework to practise API fetch.
 Google Charts and Leaflet Maps as an extra features.
 
+Please check how it works on Heroku: https://sleepy-beach-06891.herokuapp.com/
+
 ## Project setup
 ```
 npm install
