@@ -162,6 +162,7 @@ components: {
 #tenor-gif{
   margin-top: 4em;
     border: 3px solid green;
+    block-size: auto;
 }
 #susu{
   box-shadow:  0 0 100px brown;
